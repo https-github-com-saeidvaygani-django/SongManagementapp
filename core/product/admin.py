@@ -60,7 +60,8 @@ class ExportTableAdmin(admin.ModelAdmin):
 
 class GenreTableAdmin(admin.ModelAdmin):
     list_display = ('id', 'genre_name',)
-    sortable_by = ('id',)
+    sortable_by = ('genre_name',)
+    ordering = ('id',)
 
 class ExportTableAdmin(admin.ModelAdmin):
     list_display = ('id', 'format', 'file', 'created_at')
